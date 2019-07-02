@@ -1,4 +1,4 @@
-# HPRC Cluster deployment
+# HPRC simple Cluster deployment
 
 Deployment of simple simulated High Performance Robotic Computing (HPRC) cluster step by step guide. For more information about HPRC please visit [here](https://www.sciencedirect.com/science/article/pii/S092188901830232X). This guide is to be followed in computers using Ubuntu. 
 
@@ -45,7 +45,7 @@ chmod 600 authorized_keys
 
 ### File system 
 -----
-File system installation: In a HPRC cluster, the file system can be any technology traditionally used in Supercomputing. For a simple cluster, Network File System (NFS) will suffy. For this example, the folder /export/home will be shared from the master node. Such folder corresponds the user space for this configuration
+File system installation: In a HPRC cluster, the file system can be any technology traditionally used in Supercomputing. For a simple cluster, Network File System (NFS) will suffy. For this example, the folder /export/home will be shared from the master node. Such folder corresponds to the user space for this configuration
 
 
 #### Master node
@@ -68,7 +68,7 @@ service rpcbind restart
 exportfs
 ```
 
-### Slave nodes
+#### Slave nodes
 
 Edit the file _/etc/fstab_ and add the following lines:
 
@@ -88,4 +88,9 @@ mount <SERVER_IP>:/export/home /export/home
 For ArduPilot SITL please follow the instructions in [here](http://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html)
 
 For APM Planner 2, please follow the instructions in [here](http://ardupilot.org/planner2/docs/installation-for-linux.html)
+
+
+### Example
+
+For an example see swarming motion based on MPI and DroneKit in [here](https://github.com/leonardocfor/multi-robot-vicsek)
 
