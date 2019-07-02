@@ -34,7 +34,7 @@ su <username>
 ```
 
 
-Generate SSH keys for <username> and configure passwordless authentication
+Only in the master node: Generate SSH keys for <username> and configure passwordless authentication
 
 ```
 ssh-keygen -t rsa
@@ -43,17 +43,9 @@ cat id_rsa.pub >> authorized_keys
 chmod 600 authorized_keys
 ```
 
-
-### ArduPilot SITL and APM Planner 2 
------
-For ArduPilot SITL please follow the instructions in [here](http://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html)
-
-For APM Planner 2, please follow the instructions in [here](http://ardupilot.org/planner2/docs/installation-for-linux.html)
-
-
 ### File system 
 -----
-File system installation: In a HPRC cluster, the file system can be any technology traditionally used in Supercomputing. For a simple cluster, Network File System (NFS) will suffy. For this example, the folder /exports/home will be shared from the master node 
+File system installation: In a HPRC cluster, the file system can be any technology traditionally used in Supercomputing. For a simple cluster, Network File System (NFS) will suffy. For this example, the folder /export/home will be shared from the master node. Such folder corresponds the user space for this configuration
 
 
 #### Master node
@@ -65,7 +57,7 @@ apt-get install nfs-kernel-server
 Edit the file _/etc/exports_ and add the following lines:
 
 ```
-<folder(s)_to_export> <Network/Mask>(rw,no_root_squash) 
+/export/home <Network/Mask>(rw,no_root_squash) 
 ```
 
 Execute the following commands
@@ -89,4 +81,11 @@ Mount NFS shared folder
 ```
 mount <SERVER_IP>:/export/home /export/home 
 ```
+
+
+### ArduPilot SITL and APM Planner 2 
+-----
+For ArduPilot SITL please follow the instructions in [here](http://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html)
+
+For APM Planner 2, please follow the instructions in [here](http://ardupilot.org/planner2/docs/installation-for-linux.html)
 
