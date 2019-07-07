@@ -10,7 +10,6 @@ Software installation (as root or with sudo)
 ```
 apt-get install openssh-server nfs-common 
 apt-get install python-mpi4py openmpi-common openmpi-bin openmpi-doc libopenmpi-dev 
-pip install dronekit geographiclib
 ```
 
 Add hosts to /etc/hosts , one line per host (as root or with sudo)
