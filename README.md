@@ -96,6 +96,25 @@ For APM Planner 2, please follow the instructions in [here](http://ardupilot.org
 
 [PI computation with mpi4py](https://gist.github.com/jcchurch/930276)
 
+To execute this examples use the following command:
+
+```
+mpirun -np <X> --hostfile <hostfile> python <pythonSoftware>
+
+where,
+
+X = Quantity of MPI parallel processes
+<pythonSoftware> The corresponding software
+```
+
+and <hostfile> is a text file with the hostnames of the computers in your cluster, e.g. 
+  
+```
+<Hostname1>
+<Hostname2>
+<Hostname3>
+```
+
 ### HPRC example
 ---
 
