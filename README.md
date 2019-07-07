@@ -105,14 +105,10 @@ where,
 
 X = Quantity of MPI parallel processes
 <pythonSoftware> The corresponding software
-```
-
-and <hostfile> is a text file with the hostnames of the computers in your cluster, e.g. 
-  
-```
-<Hostname1>
-<Hostname2>
-<Hostname3>
+<hostfile> is a text file with the hostnames of the computers in your cluster, e.g. 
+  <Hostname1>
+  <Hostname2>
+  <Hostname3>
 ```
 
 ### HPRC example
