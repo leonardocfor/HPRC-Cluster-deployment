@@ -96,7 +96,7 @@ For APM Planner 2, please follow the instructions in [here](http://ardupilot.org
 
 [PI computation with mpi4py](https://gist.github.com/jcchurch/930276)
 
-To execute this examples use the following command:
+To execute these examples use the following command:
 
 ```
 mpirun -np <X> --hostfile <hostfile> python <pythonSoftware>
