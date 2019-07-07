@@ -89,7 +89,15 @@ For ArduPilot SITL please follow the instructions in [here](http://ardupilot.org
 For APM Planner 2, please follow the instructions in [here](http://ardupilot.org/planner2/docs/installation-for-linux.html)
 
 
-### Example
+### Traditional supercomputing (HPC) examples
+---
+
+[Hello world with mpi4py](https://github.com/erdc/mpi4py/blob/master/demo/helloworld.py)
+
+[PI computation with mpi4py](https://gist.github.com/jcchurch/930276)
+
+### HPRC example
+---
 
 For an example see swarming motion based on MPI and DroneKit in [here](https://github.com/leonardocfor/multi-robot-vicsek)
 
